@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--BG, #0B1D26);
+    /* Shadow */
+    box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.20);
+    color: white;
+    margin: 0;
+}
+
+main {
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 100px;
+    height: 100vh;
+}
+
+.preview {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+
+.previewLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.preview-image {
+    background-image: url(img/header/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    transform: translateZ(-100px) scale(2);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 80px;
+    align-items: center;
+    height: 25px;
+    z-index: 2;
+}
+
+.nav {
+    display: flex;
+}
+
+.navItem {
+    cursor: pointer;
+}
+
+.navItem:not(:last-child) {
+    margin-right: 40px;
+}
+
+.accountWraper {
+    display: flex;
+    align-items: center;
+}
+
+.accountTitle {
+    padding-left: 8px;
+}
+
+.titleWraper {
+    top: 30%;
+    left: 20%;
+    z-index: 3;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.titleText {
+    color: var(--Accent, #FBD784);
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    padding-left: 32px;
+}
+
+.line {
+    width: 72px;
+    height: 2px;    
+    flex-shrink: 0;
+    background: var(--Accent, #FBD784);
+}
+
+.titleDescription {
+    color: var(--Wei, #FFF);
+    font-family: Chronicle Display;
+    font-size: 88px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100px; /* 113.636% */
+    text-transform: capitalize;
+    width: 950px;
+}
+
+.section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    column-gap: 0;
+    align-items: center;
+    z-index: 5;
+}
+
+.section:not(:last-child) {
+    margin-bottom: 200px;
+}
+
+.sectionInfo {
+    position: relative;
+    width: 632px;
+    padding-left: 230px;
+    padding-right: 80px;
+}
+
+.sectionInfo2 {
+    position: relative;
+    width: 632px;
+    padding-left: 80px;
+    padding-right: 270px;
+}
+
+.sectionCount {
+    position: absolute;
+    opacity: 0.1;
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 240px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 240px; /* 100% */
+    top: -115px;
+    left: 100px;
+}
+
+.sectionCount2 {
+    position: absolute;
+    opacity: 0.1;
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 240px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 240px; /* 100% */
+    top: -115px;
+    left: -70px;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+}
+
+.sectionTitle {
+    color: var(--Accent, #FBD784);
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    padding-left: 24px;
+}
+
+.sectionInfoTitle {
+    color: #FFF;
+    font-family: Chronicle Display;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 555px;
+    padding: 27px 0 ;
+}
+
+.sectionInfoText {
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 177.778% */
+    width: 632px;
+}
+
+.sectionImage {
+    padding-left: 170px;
+    padding-right: 230px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.sectionImage2 {
+    padding-left: 230px;
+    padding-right: 80px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.sectionReadMore {
+    display: flex;
+    padding-top: 27px;
+    gap: 16px;
+}
+
+.sectionReadMoreText {
+    color: var(--Accent, #FBD784);
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.content {
+    width: 100%;
+    z-index: 6;
+    height: 500px;
+    position: relative;
+    top: -250px;
+}
+
+footer {
+    margin: 200px 230px 120px 230px; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerMoreInfo {
+    display: flex;
+    gap: 200px;
+}
+
+.more h5 {
+    color: var(--Accent, #FBD784);
+    font-family: Gilroy;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+}
+
+.more p {
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 177.778% */
+    margin-top: 16px;
+}
+
+.footerLogo p {
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 177.778% */
+    width: 303px;
+    margin-top: 24px;
+}
+
+.footerLogo h6 {
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 177.778% */
+    opacity: 0.5;
+    margin-top: 122px;
+}
+
+@media (max-width: 375px) {
+    .section {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 8px;
+        align-items: center;
+        height: 25px;
+        z-index: 2;
+    }
+
+    .navItem:not(:last-child) {
+        margin-right: 4px;
+    }
+
+    .titleText {
+        font-size: 4px;
+        padding-left: 3px;
+    }
+
+    .line {
+        width: 7px;
+        height: 1px;    
+    }
+
+    .titleDescription {
+        font-size: 10px;
+        width: 125px;
+        line-height: 10px;
+    }
+    
+    .logoWraper img {
+        width: 30px;
+    }
+
+    .navItem {
+        font-size: 3px;
+    }
+
+    .accountWraper img {
+        width: 40px;
+    }
+
+    .section:not(:last-child) {
+        margin-bottom: 50px;
+    }
+    
+    .sectionInfo {
+        width: 63px;
+        padding-left: 23px;
+        padding-right: 8px;
+    }
+    
+    .sectionInfo2 {
+        width: 63px;
+        padding-left: 23px;
+        padding-right: 8px;
+    }
+    
+    .sectionCount {
+        font-size: 24px;
+        line-height: 24px; /* 100% */
+        top: -15px;
+        left: 10px;
+    }
+    
+    .sectionCount2 {
+        font-size: 24px;
+        line-height: 24px; /* 100% */
+        top: -15px;
+        left: -7px;
+    }
+    
+    .sectionTitle {
+        font-size: 8px;
+        padding-left: 4px;
+        width: 300px;
+    }
+    
+    .sectionInfoTitle {
+        font-size: 18px;
+        width: 200px;
+        padding: 7px 0 ;
+    }
+    
+    .sectionInfoText {
+        font-size: 12px;
+        line-height: 12px; /* 177.778% */
+        width: 200px;
+    }
+    
+    .sectionImage {
+        padding-left: 17px;
+        padding-right: 23px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .sectionImage img {
+        width: 200px;
+    }
+
+    .sectionImage2 img {
+        width: 200px;
+    }
+    
+    .sectionImage2 {
+        padding-left: 23px;
+        padding-right: 8px;
+    }
+    
+    .sectionReadMore {
+        padding-top: 2px;
+        gap: 1px;
+    }
+    
+    .sectionReadMoreText {
+        font-size: 8px;
+    }
+
+    .sectionReadMore img {
+        width: 5px;
+    }
+    
+    .content {
+        width: 100%;
+        z-index: 6;
+        height: 50px;
+        position: relative;
+        top: -25px;
+    }
+    
+    footer {
+        margin: 20px 23px 12px 23px; 
+    }
+    
+    .footerMoreInfo {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .more h5 {
+        font-size: 7px;
+        line-height: 7px; /* 133.333% */
+    }
+    
+    .more p {
+        font-size: 8px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 8px; /* 177.778% */
+        margin-top: 6px;
+    }
+
+    .footerLogo img {
+        width: 25px;
+    }
+    
+    .footerLogo p {
+        font-size: 8px;
+        width: 100px;
+        margin-top: 14px;
+        line-height: 8px;
+    }
+    
+    .footerLogo h6 {
+        font-size: 8px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 8px; /* 177.778% */
+        opacity: 0.5;
+        margin-top: 12px;
+    }
+}
